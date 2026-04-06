@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/local/bin/npm install:*)",
+      "Bash(nvm use:*)",
+      "Read(//usr/local/Cellar/node/22.9.0_1/bin/**)",
+      "Bash(/Users/cristinica/.nvm/versions/node/v24.14.1/bin/npm install:*)",
+      "Bash(/Users/cristinica/.nvm/versions/node/v24.14.1/bin/node /Users/cristinica/.nvm/versions/node/v24.14.1/bin/npm install -D tailwindcss @tailwindcss/vite)",
+      "Bash(/Users/cristinica/.nvm/versions/node/v24.14.1/bin/node /Users/cristinica/.nvm/versions/node/v24.14.1/bin/npm run build)",
+      "Bash(arch -x86_64 /Users/cristinica/.nvm/versions/node/v24.14.1/bin/node --version)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\")",
+      "Bash(source \"$NVM_DIR/nvm.sh\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}

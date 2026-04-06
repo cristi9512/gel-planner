@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  /* Surfaces */
+  --color-surface:         #0c0e11;
+  --color-surface-low:     #111417;
+  --color-surface-high:    #23262a;
+  --color-surface-highest: #2d3035;
+
+  /* Accent — Primary: neon lime */
+  --color-volt:       #cffc00;
+  --color-volt-light: #f4ffc8;
+
+  /* Accent — Secondary: plasma cyan */
+  --color-plasma: #00e3fd;
+
+  /* Text */
+  --color-ink:      #ffffff;
+  --color-ink-muted: #9ca3af;
+  --color-ink-dim:  #6b7280;
+
+  /* Fonts */
+  --font-display: "Lexend", system-ui, sans-serif;
+  --font-body:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-label:   "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #0c0e11;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Leaflet dark map override */
+.leaflet-container {
+  background: #111417;
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-tile-pane { filter: brightness(0.95); }
+
+/* Gel markers on map */
+.gel-marker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+  font-family: "Lexend", sans-serif;
+  cursor: pointer;
+  border: 2px solid #0c0e11;
+  box-shadow: 0 0 8px rgba(207, 252, 0, 0.4);
+}
+
+/* Cockpit input: left-edge focus glow */
+.cockpit-input {
+  border-left: 2px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.cockpit-input:focus-within {
+  border-left-color: #cffc00;
+}
+
+/* Scrollbar dark */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111417; }
+::-webkit-scrollbar-thumb { background: #2d3035; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #cffc00; }
+
+/* Elevation chart tooltip */
+.ele-tooltip {
+  position: absolute;
+  background: #23262a;
+  border-left: 2px solid #cffc00;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  pointer-events: none;
+  white-space: nowrap;
+}
