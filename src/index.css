@@ -45,6 +45,8 @@ html, body, #root {
   background: #111417;
   height: 100%;
   width: 100%;
+  /* Keep Leaflet's own z-stack isolated so modals can sit above it */
+  isolation: isolate;
 }
 
 .leaflet-tile-pane { filter: brightness(0.95); }

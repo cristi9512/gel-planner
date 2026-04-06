@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { NutritionParams, CaffeineStrategy } from '../types';
+import { GelPicker } from './GelPicker';
+import { getGelById } from '../data/gels';
 
 interface Props {
   params: NutritionParams;
@@ -10,24 +12,6 @@ interface Props {
   warning?: string;
 }
 
-interface FieldConfig {
-  key: keyof NutritionParams;
-  label: string;
-  unit: string;
-  min: number;
-  max: number;
-  step: number;
-}
-
-const FIELDS: FieldConfig[] = [
-  { key: 'paceMinPerKm',    label: 'Pace',              unit: 'min/km', min: 3,  max: 12,  step: 0.1 },
-  { key: 'distanceKm',      label: 'Race distance',     unit: 'km',     min: 5,  max: 200, step: 0.5 },
-  { key: 'carbsPerHourG',   label: 'Target carbs/hour', unit: 'g/h',    min: 20, max: 120, step: 5   },
-  { key: 'carbsPerGelG',    label: 'Carbs per gel',     unit: 'g',      min: 10, max: 60,  step: 1   },
-  { key: 'firstGelMinute',  label: 'First gel at',      unit: 'min',    min: 20, max: 90,  step: 5   },
-  { key: 'absorptionMinutes', label: 'Absorption time', unit: 'min',    min: 5,  max: 20,  step: 5   },
-];
-
 function CockpitInput({
   value, min, max, step, unit, locked, onChange,
 }: {
@@ -35,13 +19,11 @@ function CockpitInput({
   unit: string; locked?: boolean; onChange: (v: string) => void;
 }) {
   return (
-    <div className={`cockpit-input bg-surface-high rounded-sm flex items-center ${locked ? 'opacity-70' : ''}`}>
+    <div className={`cockpit-input bg-surface-high rounded-sm flex items-center ${locked ? 'opacity-60' : ''}`}>
       <input
         type="number"
         value={value}
-        min={min}
-        max={max}
-        step={step}
+        min={min} max={max} step={step}
         readOnly={locked}
         onChange={(e) => !locked && onChange(e.target.value)}
         className="flex-1 bg-transparent px-3 py-2.5 text-sm font-label font-medium text-ink focus:outline-none min-w-0"
@@ -60,36 +42,108 @@ export function ParametersPanel({
   const set = <K extends keyof NutritionParams>(key: K, value: NutritionParams[K]) =>
     onChange({ ...params, [key]: value });
 
+  const handleGelSelect = (gelId: string | null) => {
+    const gel = gelId ? getGelById(gelId) : null;
+    onChange({
+      ...params,
+      selectedGelId: gelId,
+      carbsPerGelG: gel ? gel.carbsG : params.carbsPerGelG,
+    });
+  };
+
+  const handleGelCustomChange = (carbsG: number) => {
+    onChange({ ...params, selectedGelId: null, carbsPerGelG: carbsG });
+  };
+
+  const handleCafGelSelect = (gelId: string | null) => {
+    const gel = gelId ? getGelById(gelId) : null;
+    onChange({
+      ...params,
+      selectedCafGelId: gelId,
+      caffeinePerGelMg: gel ? gel.caffeineMg : params.caffeinePerGelMg,
+    });
+  };
+
+  const handleCafCustomChange = (_carbsG: number, caffeineMg?: number) => {
+    onChange({
+      ...params,
+      selectedCafGelId: null,
+      caffeinePerGelMg: caffeineMg ?? params.caffeinePerGelMg,
+    });
+  };
+
+  const selectedGel = params.selectedGelId ? getGelById(params.selectedGelId) : null;
+
   return (
     <div className="bg-surface-low rounded-xl p-5 space-y-5">
       <p className="text-ink-muted text-[10px] font-label uppercase tracking-widest">Race Config</p>
 
-      {/* Numeric fields */}
+      {/* Pace + Distance */}
       <div className="space-y-2.5">
-        {FIELDS.map(({ key, label, unit, min, max, step }) => {
-          const locked = key === 'distanceKm' && gpxDistanceKm !== undefined;
-          return (
-            <div key={key} className="grid grid-cols-2 gap-3 items-center">
-              <label className="text-xs font-label text-ink-muted leading-tight">{label}</label>
-              <div className="relative">
-                <CockpitInput
-                  value={params[key] as number}
-                  min={min} max={max} step={step} unit={unit}
-                  locked={locked}
-                  onChange={(v) => set(key, parseFloat(v) as NutritionParams[typeof key])}
-                />
-                {locked && (
-                  <span className="absolute -top-1 -right-1 text-[8px] font-label bg-volt text-surface px-1 rounded font-bold leading-tight">
-                    GPX
-                  </span>
-                )}
-              </div>
-            </div>
-          );
-        })}
+        <div className="grid grid-cols-2 gap-3 items-center">
+          <label className="text-xs font-label text-ink-muted">Pace</label>
+          <CockpitInput value={params.paceMinPerKm} min={3} max={12} step={0.1} unit="min/km"
+            onChange={(v) => set('paceMinPerKm', parseFloat(v))} />
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 items-center">
+          <label className="text-xs font-label text-ink-muted">Race distance</label>
+          <div className="relative">
+            <CockpitInput value={params.distanceKm} min={5} max={200} step={0.5} unit="km"
+              locked={gpxDistanceKm !== undefined}
+              onChange={(v) => set('distanceKm', parseFloat(v))} />
+            {gpxDistanceKm !== undefined && (
+              <span className="absolute -top-1 -right-1 text-[8px] font-label bg-volt text-surface px-1 rounded font-bold leading-tight">
+                GPX
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 items-center">
+          <label className="text-xs font-label text-ink-muted">Target carbs/hour</label>
+          <CockpitInput value={params.carbsPerHourG} min={20} max={120} step={5} unit="g/h"
+            onChange={(v) => set('carbsPerHourG', parseFloat(v))} />
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 items-center">
+          <label className="text-xs font-label text-ink-muted">First gel at</label>
+          <CockpitInput value={params.firstGelMinute} min={20} max={90} step={5} unit="min"
+            onChange={(v) => set('firstGelMinute', parseFloat(v))} />
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 items-center">
+          <label className="text-xs font-label text-ink-muted">Absorption time</label>
+          <CockpitInput value={params.absorptionMinutes} min={5} max={20} step={5} unit="min"
+            onChange={(v) => set('absorptionMinutes', parseFloat(v))} />
+        </div>
       </div>
 
-      {/* Elevation toggle — only if GPX with elevation */}
+      {/* ── Gel Selection ── */}
+      <div className="space-y-2.5 pt-3 border-t border-surface-high/60">
+        <p className="text-ink-muted text-[10px] font-label uppercase tracking-widest">Your Gel</p>
+
+        <GelPicker
+          label="Regular gel"
+          selectedGelId={params.selectedGelId}
+          customCarbsG={params.carbsPerGelG}
+          showCaffeineInPill={false}
+          onSelect={handleGelSelect}
+          onCustomChange={handleGelCustomChange}
+        />
+
+        {/* Show carbs readout when a gel is selected */}
+        {selectedGel && (
+          <div className="flex items-center gap-2 text-[10px] font-label text-ink-muted pl-1">
+            <span className="text-volt font-semibold">{selectedGel.carbsG} g</span> carbs per gel
+            {selectedGel.caffeineMg > 0 && (
+              <span className="text-plasma">· {selectedGel.caffeineMg} mg caffeine</span>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Elevation toggle */}
       {hasElevation && (
         <label className="flex items-start gap-3 cursor-pointer select-none bg-surface-high rounded-sm px-3 py-2.5">
           <input
@@ -105,7 +159,7 @@ export function ParametersPanel({
         </label>
       )}
 
-      {/* Caffeine section */}
+      {/* ── Caffeine section ── */}
       <div className="space-y-2.5 pt-3 border-t border-surface-high/60">
         <label className="flex items-start gap-3 cursor-pointer select-none bg-surface-high rounded-sm px-3 py-2.5">
           <input
@@ -117,20 +171,24 @@ export function ParametersPanel({
           />
           <div>
             <p className="text-xs font-label font-medium text-ink leading-tight">Mix caffeinated gels ☕</p>
-            <p className="text-[10px] font-label text-ink-dim mt-0.5">Plan regular vs. caffeine gel distribution</p>
+            <p className="text-[10px] font-label text-ink-dim mt-0.5">Alternate with a caffeinated variant</p>
           </div>
         </label>
 
         {caffeineOpen && params.useCaffeineGels && (
           <div className="space-y-2.5 pl-1">
-            {/* Caffeine per gel */}
-            <div className="grid grid-cols-2 gap-3 items-center">
-              <label className="text-xs font-label text-ink-muted">Caffeine per gel</label>
-              <CockpitInput
-                value={params.caffeinePerGelMg} min={25} max={200} step={25} unit="mg"
-                onChange={(v) => set('caffeinePerGelMg', parseFloat(v))}
-              />
-            </div>
+            {/* Caffeinated gel picker */}
+            <p className="text-[10px] font-label text-ink-muted">Caffeinated gel variant</p>
+            <GelPicker
+              label="Caffeinated gel"
+              selectedGelId={params.selectedCafGelId}
+              customCarbsG={params.carbsPerGelG}
+              customCaffeineMg={params.caffeinePerGelMg}
+              showCaffeineInPill={true}
+              caffeineOnly={true}
+              onSelect={handleCafGelSelect}
+              onCustomChange={handleCafCustomChange}
+            />
 
             {/* Strategy */}
             <div className="grid grid-cols-2 gap-3 items-center">
@@ -148,36 +206,30 @@ export function ParametersPanel({
             {params.caffeineStrategy === 'finalPush' && (
               <div className="grid grid-cols-2 gap-3 items-center">
                 <label className="text-xs font-label text-ink-muted">Caffeinated gels</label>
-                <CockpitInput
-                  value={params.caffeineGelCount} min={1} max={6} step={1} unit="at end"
-                  onChange={(v) => set('caffeineGelCount', parseInt(v))}
-                />
+                <CockpitInput value={params.caffeineGelCount} min={1} max={6} step={1} unit="at end"
+                  onChange={(v) => set('caffeineGelCount', parseInt(v))} />
               </div>
             )}
 
             <div className="grid grid-cols-2 gap-3 items-center">
               <label className="text-xs font-label text-ink-muted">No caffeine in final</label>
-              <CockpitInput
-                value={params.caffeineBlackoutMin} min={0} max={90} step={15} unit="min"
-                onChange={(v) => set('caffeineBlackoutMin', parseFloat(v))}
-              />
+              <CockpitInput value={params.caffeineBlackoutMin} min={0} max={90} step={15} unit="min"
+                onChange={(v) => set('caffeineBlackoutMin', parseFloat(v))} />
             </div>
 
             <p className="text-[10px] font-label text-ink-dim pl-1">
-              Peak effect ~45 min after intake. Avoid dosing too close to the finish.
+              Peak effect ~45 min after intake. Avoid dosing within {params.caffeineBlackoutMin} min of finish.
             </p>
           </div>
         )}
       </div>
 
-      {/* Warning */}
       {warning && (
         <div className="rounded-sm bg-volt/10 border-l-2 border-volt px-3 py-2 text-xs font-label text-volt">
           ⚠ {warning}
         </div>
       )}
 
-      {/* CTA */}
       <button
         onClick={onCalculate}
         className="w-full rounded-full py-3 font-display font-black text-sm uppercase tracking-wider text-surface transition-transform active:scale-95"

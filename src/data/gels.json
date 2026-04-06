@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "gu-vanilla-bean",
+    "brand": "GU Energy",
+    "name": "Vanilla Bean",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-chocolate-outrage",
+    "brand": "GU Energy",
+    "name": "Chocolate Outrage",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-tri-berry",
+    "brand": "GU Energy",
+    "name": "Tri-Berry",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-salted-caramel",
+    "brand": "GU Energy",
+    "name": "Salted Caramel",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-mandarin-orange",
+    "brand": "GU Energy",
+    "name": "Mandarin Orange",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-salted-watermelon",
+    "brand": "GU Energy",
+    "name": "Salted Watermelon",
+    "carbsG": 22,
+    "caffeineMg": 20,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "20mg caffeine"
+  },
+  {
+    "id": "gu-espresso-love",
+    "brand": "GU Energy",
+    "name": "Espresso Love",
+    "carbsG": 22,
+    "caffeineMg": 40,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "40mg caffeine"
+  },
+  {
+    "id": "gu-caramel-macchiato",
+    "brand": "GU Energy",
+    "name": "Caramel Macchiato",
+    "carbsG": 22,
+    "caffeineMg": 40,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "40mg caffeine"
+  },
+  {
+    "id": "gu-cola-me-happy",
+    "brand": "GU Energy",
+    "name": "Cola Me Happy",
+    "carbsG": 22,
+    "caffeineMg": 40,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "40mg caffeine"
+  },
+  {
+    "id": "gu-jet-blackberry",
+    "brand": "GU Energy",
+    "name": "Jet Blackberry",
+    "carbsG": 22,
+    "caffeineMg": 40,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "40mg caffeine"
+  },
+  {
+    "id": "gu-strawberry-banana",
+    "brand": "GU Energy",
+    "name": "Strawberry Banana",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Caffeine-free"
+  },
+  {
+    "id": "gu-lemon-sublime",
+    "brand": "GU Energy",
+    "name": "Lemon Sublime",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Caffeine-free"
+  },
+  {
+    "id": "gu-raspberry-lemonade",
+    "brand": "GU Energy",
+    "name": "Raspberry Lemonade",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Caffeine-free"
+  },
+  {
+    "id": "gu-birthday-cake",
+    "brand": "GU Energy",
+    "name": "Birthday Cake",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Caffeine-free"
+  },
+  {
+    "id": "gu-campfire-smores",
+    "brand": "GU Energy",
+    "name": "Campfire S'mores",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Caffeine-free"
+  },
+  {
+    "id": "gu-pumpkin-spice",
+    "brand": "GU Energy",
+    "name": "Pumpkin Spice",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Seasonal; caffeine-free"
+  },
+  {
+    "id": "gu-roctane-cherry-lime",
+    "brand": "GU Energy",
+    "name": "Roctane Cherry Lime",
+    "carbsG": 21,
+    "caffeineMg": 35,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 35mg caffeine; higher sodium (125mg) and amino acids"
+  },
+  {
+    "id": "gu-roctane-salted-lime",
+    "brand": "GU Energy",
+    "name": "Roctane Salted Lime",
+    "carbsG": 21,
+    "caffeineMg": 35,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 35mg caffeine"
+  },
+  {
+    "id": "gu-roctane-sea-salt-chocolate",
+    "brand": "GU Energy",
+    "name": "Roctane Sea Salt Chocolate",
+    "carbsG": 21,
+    "caffeineMg": 35,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 35mg caffeine"
+  },
+  {
+    "id": "gu-roctane-blueberry-pomegranate",
+    "brand": "GU Energy",
+    "name": "Roctane Blueberry Pomegranate",
+    "carbsG": 21,
+    "caffeineMg": 35,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 35mg caffeine"
+  },
+  {
+    "id": "gu-roctane-vanilla-orange",
+    "brand": "GU Energy",
+    "name": "Roctane Vanilla Orange",
+    "carbsG": 21,
+    "caffeineMg": 35,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 35mg caffeine"
+  },
+  {
+    "id": "gu-roctane-cold-brew-coffee",
+    "brand": "GU Energy",
+    "name": "Roctane Cold Brew Coffee",
+    "carbsG": 21,
+    "caffeineMg": 70,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; 70mg caffeine (double); max 5/day recommended"
+  },
+  {
+    "id": "gu-roctane-lemonade",
+    "brand": "GU Energy",
+    "name": "Roctane Lemonade",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; caffeine-free"
+  },
+  {
+    "id": "gu-roctane-strawberry-kiwi",
+    "brand": "GU Energy",
+    "name": "Roctane Strawberry Kiwi",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; caffeine-free"
+  },
+  {
+    "id": "gu-roctane-pineapple",
+    "brand": "GU Energy",
+    "name": "Roctane Pineapple",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Roctane line; caffeine-free"
+  },
+  {
+    "id": "gu-liquid-lemonade",
+    "brand": "GU Energy",
+    "name": "Liquid Energy Lemonade",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "Liquid gel format; caffeine-free; ~60ml pouch"
+  },
+  {
+    "id": "gu-liquid-orange",
+    "brand": "GU Energy",
+    "name": "Liquid Energy Orange",
+    "carbsG": 23,
+    "caffeineMg": 20,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "Liquid gel format; 20mg caffeine; ~60ml pouch"
+  },
+  {
+    "id": "gu-liquid-coffee",
+    "brand": "GU Energy",
+    "name": "Liquid Energy Coffee",
+    "carbsG": 23,
+    "caffeineMg": 40,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "Liquid gel format; 40mg caffeine; ~60ml pouch"
+  },
+  {
+    "id": "gu-liquid-cola",
+    "brand": "GU Energy",
+    "name": "Liquid Energy Cola",
+    "carbsG": 23,
+    "caffeineMg": 40,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "Liquid gel format; 40mg caffeine; ~60ml pouch"
+  },
+  {
+    "id": "maurten-gel-100",
+    "brand": "Maurten",
+    "name": "Gel 100",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "Hydrogel technology; no flavour; no water needed"
+  },
+  {
+    "id": "maurten-gel-100-caf-100",
+    "brand": "Maurten",
+    "name": "Gel 100 Caf 100",
+    "carbsG": 25,
+    "caffeineMg": 100,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "Hydrogel technology; 100mg caffeine; no flavour"
+  },
+  {
+    "id": "maurten-gel-160",
+    "brand": "Maurten",
+    "name": "Gel 160",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 65,
+    "type": "gel",
+    "notes": "Larger format; hydrogel technology; no caffeinated version available"
+  },
+  {
+    "id": "sis-go-isotonic-apple",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Isotonic Apple",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "No water needed; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-isotonic-lemon-lime",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Isotonic Lemon & Lime",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "No water needed; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-isotonic-orange",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Isotonic Orange",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "No water needed; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-isotonic-tropical",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Isotonic Tropical",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "No water needed; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-isotonic-cherry",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Isotonic Cherry",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "No water needed; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-caffeine-75",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Energy + Caffeine 75mg",
+    "carbsG": 22,
+    "caffeineMg": 75,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "75mg caffeine; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-go-electrolyte",
+    "brand": "SiS (Science in Sport)",
+    "name": "GO Energy + Electrolyte",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "Added electrolytes; 60ml isotonic gel"
+  },
+  {
+    "id": "sis-beta-fuel-orange",
+    "brand": "SiS (Science in Sport)",
+    "name": "Beta Fuel Orange",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "High carb; 1:0.8 maltodextrin:fructose ratio; 60ml"
+  },
+  {
+    "id": "sis-beta-fuel-strawberry-lime",
+    "brand": "SiS (Science in Sport)",
+    "name": "Beta Fuel Strawberry & Lime",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "High carb; 1:0.8 maltodextrin:fructose ratio; 60ml"
+  },
+  {
+    "id": "sis-beta-fuel-raspberry-lemon",
+    "brand": "SiS (Science in Sport)",
+    "name": "Beta Fuel Raspberry & Lemon",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "High carb; with electrolytes; 60ml"
+  },
+  {
+    "id": "sis-beta-fuel-nootropics",
+    "brand": "SiS (Science in Sport)",
+    "name": "Beta Fuel + Nootropics",
+    "carbsG": 40,
+    "caffeineMg": 200,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "200mg caffeine + 200mg L-theanine + 250mg Citicoline; max 1/day; 60ml"
+  },
+  {
+    "id": "clif-shot-chocolate",
+    "brand": "Clif Bar",
+    "name": "Shot Chocolate",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "Caffeine-free; organic"
+  },
+  {
+    "id": "clif-shot-vanilla",
+    "brand": "Clif Bar",
+    "name": "Shot Vanilla",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "Caffeine-free; organic"
+  },
+  {
+    "id": "clif-shot-razz",
+    "brand": "Clif Bar",
+    "name": "Shot Razz",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "Caffeine-free; organic"
+  },
+  {
+    "id": "clif-shot-boston-cream-pie",
+    "brand": "Clif Bar",
+    "name": "Shot Boston Cream Pie",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "Caffeine-free; organic"
+  },
+  {
+    "id": "clif-shot-citrus",
+    "brand": "Clif Bar",
+    "name": "Shot Citrus",
+    "carbsG": 25,
+    "caffeineMg": 25,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "25mg caffeine from green tea; organic"
+  },
+  {
+    "id": "clif-shot-strawberry",
+    "brand": "Clif Bar",
+    "name": "Shot Strawberry",
+    "carbsG": 25,
+    "caffeineMg": 25,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "25mg caffeine from green tea; organic"
+  },
+  {
+    "id": "clif-shot-mocha",
+    "brand": "Clif Bar",
+    "name": "Shot Mocha",
+    "carbsG": 25,
+    "caffeineMg": 50,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "50mg caffeine; organic"
+  },
+  {
+    "id": "clif-shot-chocolate-cherry",
+    "brand": "Clif Bar",
+    "name": "Shot Chocolate Cherry",
+    "carbsG": 24,
+    "caffeineMg": 100,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "100mg caffeine; organic"
+  },
+  {
+    "id": "clif-shot-double-espresso",
+    "brand": "Clif Bar",
+    "name": "Shot Double Espresso",
+    "carbsG": 24,
+    "caffeineMg": 100,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "100mg caffeine; organic"
+  },
+  {
+    "id": "powerbar-powergel-vanilla",
+    "brand": "PowerBar",
+    "name": "PowerGel Original Vanilla",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 41,
+    "type": "gel",
+    "notes": "C2Max 2:1 glucose:fructose; 200mg sodium"
+  },
+  {
+    "id": "powerbar-powergel-tropical-fruit",
+    "brand": "PowerBar",
+    "name": "PowerGel Original Tropical Fruit",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 41,
+    "type": "gel",
+    "notes": "C2Max 2:1 glucose:fructose; 200mg sodium"
+  },
+  {
+    "id": "powerbar-powergel-strawberry-banana",
+    "brand": "PowerBar",
+    "name": "PowerGel Original Strawberry Banana",
+    "carbsG": 26,
+    "caffeineMg": 25,
+    "servingG": 41,
+    "type": "gel",
+    "notes": "C2Max; 25mg caffeine"
+  },
+  {
+    "id": "powerbar-powergel-green-apple",
+    "brand": "PowerBar",
+    "name": "PowerGel Original Green Apple",
+    "carbsG": 26,
+    "caffeineMg": 50,
+    "servingG": 41,
+    "type": "gel",
+    "notes": "C2Max; 50mg caffeine"
+  },
+  {
+    "id": "powerbar-powergel-lemon",
+    "brand": "PowerBar",
+    "name": "PowerGel Original Lemon",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 41,
+    "type": "gel",
+    "notes": "C2Max 2:1 glucose:fructose"
+  },
+  {
+    "id": "powerbar-powergel-hydro-orange",
+    "brand": "PowerBar",
+    "name": "PowerGel Hydro Orange",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 67,
+    "type": "liquid-gel",
+    "notes": "Liquid gel; no water needed; 67ml; C2Max"
+  },
+  {
+    "id": "powerbar-powergel-hydro-mojito",
+    "brand": "PowerBar",
+    "name": "PowerGel Hydro Mojito",
+    "carbsG": 25,
+    "caffeineMg": 50,
+    "servingG": 67,
+    "type": "liquid-gel",
+    "notes": "Liquid gel; 50mg caffeine; 67ml; C2Max"
+  },
+  {
+    "id": "powerbar-fuel-gel-30-lemon",
+    "brand": "PowerBar",
+    "name": "Fuel Gel 30 Lemon",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 50,
+    "type": "liquid-gel",
+    "notes": "High-carb; 1:0.8 glucose:fructose; 50ml; 202mg sodium; caffeine-free version"
+  },
+  {
+    "id": "powerbar-fuel-gel-30-lemon-caffeine",
+    "brand": "PowerBar",
+    "name": "Fuel Gel 30 Lemon Caffeine",
+    "carbsG": 30,
+    "caffeineMg": 100,
+    "servingG": 50,
+    "type": "liquid-gel",
+    "notes": "High-carb; 1:0.8 glucose:fructose; 50ml; 100mg caffeine"
+  },
+  {
+    "id": "hammer-gel-apple-cinnamon",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Apple-Cinnamon",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-banana",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Banana",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-chocolate",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Chocolate",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-orange",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Orange",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-raspberry",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Raspberry",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-vanilla",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Vanilla",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-huckleberry",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Montana Huckleberry",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Maltodextrin-based; no refined sugar"
+  },
+  {
+    "id": "hammer-gel-espresso",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Espresso",
+    "carbsG": 22,
+    "caffeineMg": 50,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "50mg caffeine"
+  },
+  {
+    "id": "hammer-gel-tropical",
+    "brand": "Hammer Nutrition",
+    "name": "Hammer Gel Tropical",
+    "carbsG": 22,
+    "caffeineMg": 25,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "25mg caffeine"
+  },
+  {
+    "id": "torq-apple-crumble",
+    "brand": "Torq",
+    "name": "Apple Crumble",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes; vegan"
+  },
+  {
+    "id": "torq-lemon-drizzle",
+    "brand": "Torq",
+    "name": "Lemon Drizzle",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes; vegan"
+  },
+  {
+    "id": "torq-orange-banana",
+    "brand": "Torq",
+    "name": "Orange & Banana",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes; vegan"
+  },
+  {
+    "id": "torq-raspberry-ripple",
+    "brand": "Torq",
+    "name": "Raspberry Ripple",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes; vegan"
+  },
+  {
+    "id": "torq-rhubarb-custard",
+    "brand": "Torq",
+    "name": "Rhubarb & Custard",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes; vegan"
+  },
+  {
+    "id": "torq-strawberry-yoghurt",
+    "brand": "Torq",
+    "name": "Strawberry Yoghurt",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "2:1 maltodextrin:fructose; all 5 electrolytes"
+  },
+  {
+    "id": "torq-naked",
+    "brand": "Torq",
+    "name": "Naked (Unflavoured)",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "Unflavoured; 2:1 maltodextrin:fructose"
+  },
+  {
+    "id": "torq-banoffee-caffeine",
+    "brand": "Torq",
+    "name": "Banoffee (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 89,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "89mg natural caffeine from guarana"
+  },
+  {
+    "id": "torq-caramel-latte-caffeine",
+    "brand": "Torq",
+    "name": "Caramel Latte (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 89,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "89mg natural caffeine from guarana"
+  },
+  {
+    "id": "torq-cola-caffeine",
+    "brand": "Torq",
+    "name": "Cola (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 89,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "89mg natural caffeine from guarana"
+  },
+  {
+    "id": "torq-forest-fruits-caffeine",
+    "brand": "Torq",
+    "name": "Forest Fruits (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 89,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "89mg natural caffeine from guarana"
+  },
+  {
+    "id": "high5-energy-gel-apple",
+    "brand": "High5",
+    "name": "Energy Gel Apple",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "Made with real fruit juice; caffeine-free"
+  },
+  {
+    "id": "high5-energy-gel-orange",
+    "brand": "High5",
+    "name": "Energy Gel Orange",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "Made with real fruit juice; caffeine-free"
+  },
+  {
+    "id": "high5-energy-gel-berry",
+    "brand": "High5",
+    "name": "Energy Gel Berry",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "Made with real fruit juice; caffeine-free"
+  },
+  {
+    "id": "high5-energy-gel-caffeine-orange",
+    "brand": "High5",
+    "name": "Energy Gel + Caffeine Orange",
+    "carbsG": 23,
+    "caffeineMg": 30,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "30mg caffeine; real fruit juice"
+  },
+  {
+    "id": "high5-energy-gel-caffeine-raspberry",
+    "brand": "High5",
+    "name": "Energy Gel + Caffeine Raspberry",
+    "carbsG": 23,
+    "caffeineMg": 30,
+    "servingG": 40,
+    "type": "gel",
+    "notes": "30mg caffeine; real fruit juice"
+  },
+  {
+    "id": "high5-energy-gel-aqua-berry",
+    "brand": "High5",
+    "name": "Energy Gel Aqua Berry",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 66,
+    "type": "liquid-gel",
+    "notes": "Isotonic liquid gel; no water needed; 66ml"
+  },
+  {
+    "id": "high5-energy-gel-aqua-orange",
+    "brand": "High5",
+    "name": "Energy Gel Aqua Orange",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 66,
+    "type": "liquid-gel",
+    "notes": "Isotonic liquid gel; no water needed; 66ml"
+  },
+  {
+    "id": "high5-energy-gel-aqua-caffeine-berry",
+    "brand": "High5",
+    "name": "Energy Gel Aqua + Caffeine Berry",
+    "carbsG": 23,
+    "caffeineMg": 30,
+    "servingG": 66,
+    "type": "liquid-gel",
+    "notes": "Isotonic liquid gel; 30mg caffeine; 66ml"
+  },
+  {
+    "id": "high5-energy-gel-aqua-caffeine-citrus",
+    "brand": "High5",
+    "name": "Energy Gel Aqua + Caffeine Citrus",
+    "carbsG": 23,
+    "caffeineMg": 30,
+    "servingG": 66,
+    "type": "liquid-gel",
+    "notes": "Isotonic liquid gel; 30mg caffeine; 66ml"
+  },
+  {
+    "id": "precision-pf30",
+    "brand": "Precision Fuel & Hydration",
+    "name": "PF 30 Gel",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 51,
+    "type": "gel",
+    "notes": "2:1 glucose:fructose; mild citrus flavour; no electrolytes"
+  },
+  {
+    "id": "precision-pf30-caf",
+    "brand": "Precision Fuel & Hydration",
+    "name": "PF 30 Caffeine Gel",
+    "carbsG": 30,
+    "caffeineMg": 100,
+    "servingG": 51,
+    "type": "gel",
+    "notes": "100mg caffeine; 2:1 glucose:fructose; mild citrus flavour"
+  },
+  {
+    "id": "precision-pf90",
+    "brand": "Precision Fuel & Hydration",
+    "name": "PF 90 Gel",
+    "carbsG": 90,
+    "caffeineMg": 0,
+    "servingG": 153,
+    "type": "gel",
+    "notes": "Large format; 90g carbs; 2:1 glucose:fructose; no electrolytes; designed for 1h use"
+  },
+  {
+    "id": "huma-original-strawberry",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Strawberry",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "Real food; chia seeds; 105mg sodium"
+  },
+  {
+    "id": "huma-original-apple-cinnamon",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Apple Cinnamon",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "Real food; chia seeds; 105mg sodium"
+  },
+  {
+    "id": "huma-original-blueberry",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Blueberry",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "Real food; chia seeds; 105mg sodium"
+  },
+  {
+    "id": "huma-original-mango",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Mango",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "Real food; chia seeds; 105mg sodium"
+  },
+  {
+    "id": "huma-original-raspberry-caf",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Raspberry (Caffeine)",
+    "carbsG": 24,
+    "caffeineMg": 25,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "25mg caffeine; chia seeds"
+  },
+  {
+    "id": "huma-original-lemonade-caf",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Lemonade (Caffeine)",
+    "carbsG": 24,
+    "caffeineMg": 25,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "25mg caffeine; chia seeds"
+  },
+  {
+    "id": "huma-original-mocha-caf",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Mocha (Caffeine)",
+    "carbsG": 24,
+    "caffeineMg": 50,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "50mg caffeine; chia seeds"
+  },
+  {
+    "id": "huma-plus-blackberry-banana",
+    "brand": "Huma",
+    "name": "Chia Energy Gel PLUS Blackberry Banana",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "Double electrolytes (245mg sodium); chia seeds"
+  },
+  {
+    "id": "huma-plus-strawberry-lemonade-caf",
+    "brand": "Huma",
+    "name": "Chia Energy Gel PLUS Strawberry Lemonade (Caffeine)",
+    "carbsG": 24,
+    "caffeineMg": 25,
+    "servingG": 44,
+    "type": "gel",
+    "notes": "25mg caffeine; double electrolytes (245mg sodium)"
+  },
+  {
+    "id": "huma-ultra-apple-pie",
+    "brand": "Huma",
+    "name": "Chia Energy Gel Ultra Apple Pie",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 70,
+    "type": "gel",
+    "notes": "Ultra format; 40g carbs; 70g packet; real food"
+  },
+  {
+    "id": "naak-ultra-chocolate",
+    "brand": "Naak",
+    "name": "Ultra Energy Gel Chocolate",
+    "carbsG": 27,
+    "caffeineMg": 35,
+    "servingG": 55,
+    "type": "gel",
+    "notes": "Contains cricket protein (2g); 460mg electrolytes; 35mg caffeine from green coffee"
+  },
+  {
+    "id": "naak-ultra-maple",
+    "brand": "Naak",
+    "name": "Ultra Energy Gel Maple",
+    "carbsG": 27,
+    "caffeineMg": 0,
+    "servingG": 55,
+    "type": "gel",
+    "notes": "Contains cricket protein (2g); 365mg electrolytes; caffeine-free"
+  },
+  {
+    "id": "naak-boost-neutral",
+    "brand": "Naak",
+    "name": "Boost Energy Gel Neutral",
+    "carbsG": 25,
+    "caffeineMg": 0,
+    "servingG": 50,
+    "type": "gel",
+    "notes": "2:1 glucose:fructose; 185mg electrolytes; no cricket protein"
+  },
+  {
+    "id": "veloforte-tempo",
+    "brand": "Veloforte",
+    "name": "Tempo (Date & Ginger)",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Natural real-food ingredients; no maltodextrin; 110mg electrolytes"
+  },
+  {
+    "id": "veloforte-riba",
+    "brand": "Veloforte",
+    "name": "Riba (Blackcurrant & Elderflower)",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Natural real-food ingredients; no maltodextrin; 110mg electrolytes"
+  },
+  {
+    "id": "veloforte-primo",
+    "brand": "Veloforte",
+    "name": "Primo (Beetroot & Lemon)",
+    "carbsG": 22,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Natural real-food ingredients; no maltodextrin; 110mg electrolytes"
+  },
+  {
+    "id": "veloforte-desto",
+    "brand": "Veloforte",
+    "name": "Desto (Tart Cherry + Caffeine)",
+    "carbsG": 22,
+    "caffeineMg": 75,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "75mg natural caffeine from guarana; no maltodextrin"
+  },
+  {
+    "id": "veloforte-doppio",
+    "brand": "Veloforte",
+    "name": "Doppio (Coffee & Maple + Caffeine)",
+    "carbsG": 22,
+    "caffeineMg": 75,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "75mg natural caffeine from guarana; no maltodextrin"
+  },
+  {
+    "id": "spring-energy-canaberry",
+    "brand": "Spring Energy",
+    "name": "CanaBerry (Strawberry Smoothie)",
+    "carbsG": 20,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "Real whole food ingredients; vegan; caffeine-free"
+  },
+  {
+    "id": "spring-energy-long-haul",
+    "brand": "Spring Energy",
+    "name": "Long Haul (Peanut Butter)",
+    "carbsG": 18,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "Real whole food; mixed carb/fat fuel; caffeine-free"
+  },
+  {
+    "id": "spring-energy-hill-aid",
+    "brand": "Spring Energy",
+    "name": "Hill Aid with Caffeine (Icy Mango)",
+    "carbsG": 20,
+    "caffeineMg": 40,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "40mg caffeine from green coffee beans; real food"
+  },
+  {
+    "id": "spring-energy-speednut",
+    "brand": "Spring Energy",
+    "name": "Speednut with Caffeine (Nutty Cocoa Berry)",
+    "carbsG": 22,
+    "caffeineMg": 50,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "50mg caffeine; MCT-rich; higher calorie density"
+  },
+  {
+    "id": "untapped-maple",
+    "brand": "Untapped",
+    "name": "Maple Syrup Gel",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 38,
+    "type": "liquid-gel",
+    "notes": "100% pure organic Vermont maple syrup; 5mg sodium; vegan; caffeine-free"
+  },
+  {
+    "id": "untapped-coffee",
+    "brand": "Untapped",
+    "name": "Coffee Gel",
+    "carbsG": 26,
+    "caffeineMg": 27,
+    "servingG": 38,
+    "type": "liquid-gel",
+    "notes": "27mg natural caffeine from coffee; organic maple syrup base"
+  },
+  {
+    "id": "ote-energy-gel-apple",
+    "brand": "OTE",
+    "name": "Energy Gel Apple",
+    "carbsG": 20,
+    "caffeineMg": 0,
+    "servingG": 30,
+    "type": "gel",
+    "notes": "Natural fruit juice; vegan; gluten-free"
+  },
+  {
+    "id": "ote-energy-gel-orange",
+    "brand": "OTE",
+    "name": "Energy Gel Orange",
+    "carbsG": 20,
+    "caffeineMg": 0,
+    "servingG": 30,
+    "type": "gel",
+    "notes": "Natural fruit juice; vegan; gluten-free"
+  },
+  {
+    "id": "ote-energy-gel-pineapple-caffeine",
+    "brand": "OTE",
+    "name": "Energy Gel Pineapple (Caffeine)",
+    "carbsG": 20,
+    "caffeineMg": 50,
+    "servingG": 30,
+    "type": "gel",
+    "notes": "50mg caffeine from guarana"
+  },
+  {
+    "id": "ote-energy-gel-blackcurrant-caffeine",
+    "brand": "OTE",
+    "name": "Energy Gel Blackcurrant (Caffeine)",
+    "carbsG": 20,
+    "caffeineMg": 100,
+    "servingG": 30,
+    "type": "gel",
+    "notes": "100mg caffeine from guarana"
+  },
+  {
+    "id": "ote-super-gel-berry",
+    "brand": "OTE",
+    "name": "Super Gel Berry",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 66,
+    "type": "gel",
+    "notes": "High carb; maltodextrin + fructose; electrolytes; 66ml"
+  },
+  {
+    "id": "ote-super-gel-cherry",
+    "brand": "OTE",
+    "name": "Super Gel Cherry",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 66,
+    "type": "gel",
+    "notes": "High carb; maltodextrin + fructose; electrolytes; 66ml"
+  },
+  {
+    "id": "ote-super-gel-tropical",
+    "brand": "OTE",
+    "name": "Super Gel Tropical",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 66,
+    "type": "gel",
+    "notes": "High carb; maltodextrin + fructose; electrolytes; 66ml"
+  },
+  {
+    "id": "ote-super-gel-citrus-caffeine",
+    "brand": "OTE",
+    "name": "Super Gel Citrus+ (Caffeine)",
+    "carbsG": 40,
+    "caffeineMg": 75,
+    "servingG": 66,
+    "type": "gel",
+    "notes": "75mg caffeine from guarana; high carb; 66ml"
+  },
+  {
+    "id": "226ers-high-energy-gel-76g-neutral",
+    "brand": "226ERS",
+    "name": "High Energy Gel Neutral (76g)",
+    "carbsG": 50,
+    "caffeineMg": 0,
+    "servingG": 76,
+    "type": "gel",
+    "notes": "Cyclodextrin-based carbs; high carb; 200 kcal; caffeine-free"
+  },
+  {
+    "id": "226ers-high-energy-gel-76g-coffee",
+    "brand": "226ERS",
+    "name": "High Energy Gel Coffee (76g)",
+    "carbsG": 50,
+    "caffeineMg": 80,
+    "servingG": 76,
+    "type": "gel",
+    "notes": "Cyclodextrin-based; 80mg caffeine; 200 kcal"
+  },
+  {
+    "id": "226ers-high-energy-gel-76g-cherry",
+    "brand": "226ERS",
+    "name": "High Energy Gel Cherry (76g)",
+    "carbsG": 50,
+    "caffeineMg": 160,
+    "servingG": 76,
+    "type": "gel",
+    "notes": "Cyclodextrin-based; 160mg caffeine; 200 kcal"
+  },
+  {
+    "id": "226ers-high-energy-gel-xs-45g-neutral",
+    "brand": "226ERS",
+    "name": "High Energy Gel XS Neutral (45g)",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "Cyclodextrin-based; smaller format; caffeine-free"
+  },
+  {
+    "id": "226ers-high-energy-gel-xs-45g-cherry",
+    "brand": "226ERS",
+    "name": "High Energy Gel XS Cherry (45g)",
+    "carbsG": 30,
+    "caffeineMg": 95,
+    "servingG": 45,
+    "type": "gel",
+    "notes": "Cyclodextrin-based; 95mg caffeine; smaller format"
+  },
+  {
+    "id": "enervit-liquid-gel-citrus-caffeine",
+    "brand": "Enervit",
+    "name": "Liquid Gel Competition Citrus + Caffeine",
+    "carbsG": 30,
+    "caffeineMg": 25,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; 25mg caffeine; resealable cap; 60ml"
+  },
+  {
+    "id": "enervit-liquid-gel-citrus",
+    "brand": "Enervit",
+    "name": "Liquid Gel Competition Citrus",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; caffeine-free; resealable cap; 60ml"
+  },
+  {
+    "id": "enervit-carbo-gel-c21-orange",
+    "brand": "Enervit",
+    "name": "Carbo Gel C2:1 PRO Orange",
+    "carbsG": 40,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; high carb; 60ml; caffeine-free"
+  },
+  {
+    "id": "enervit-carbo-gel-c21-cola-caffeine",
+    "brand": "Enervit",
+    "name": "Carbo Gel C2:1 PRO Cola + Caffeine",
+    "carbsG": 40,
+    "caffeineMg": 100,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; high carb; 100mg caffeine; 60ml"
+  },
+  {
+    "id": "neversecond-c30-berry",
+    "brand": "NeverSecond",
+    "name": "C30 Energy Gel Berry",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; 200mg sodium; 60ml; caffeine-free"
+  },
+  {
+    "id": "neversecond-c30-orange",
+    "brand": "NeverSecond",
+    "name": "C30 Energy Gel Orange",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; 200mg sodium; 60ml; caffeine-free"
+  },
+  {
+    "id": "neversecond-c30-fruit-punch",
+    "brand": "NeverSecond",
+    "name": "C30 Energy Gel Fruit Punch",
+    "carbsG": 30,
+    "caffeineMg": 0,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "2:1 maltodextrin:fructose; 200mg sodium; 60ml; caffeine-free"
+  },
+  {
+    "id": "neversecond-c30-cola-caffeine",
+    "brand": "NeverSecond",
+    "name": "C30+ Energy Gel Cola (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 75,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "75mg caffeine; 200mg sodium; max 1 per hour"
+  },
+  {
+    "id": "neversecond-c30-neutral-caffeine",
+    "brand": "NeverSecond",
+    "name": "C30+ Energy Gel Neutral (Caffeine)",
+    "carbsG": 30,
+    "caffeineMg": 75,
+    "servingG": 60,
+    "type": "liquid-gel",
+    "notes": "75mg caffeine; neutral flavour; 200mg sodium"
+  },
+  {
+    "id": "overstims-antioxidant-lemon",
+    "brand": "Overstims",
+    "name": "Antioxidant Gel Lemon",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 30,
+    "type": "liquid-gel",
+    "notes": "Liquid texture; vitamins B6, E, zinc; no caffeine; made in France"
+  },
+  {
+    "id": "overstims-antioxidant-green-apple",
+    "brand": "Overstims",
+    "name": "Antioxidant Gel Green Apple",
+    "carbsG": 26,
+    "caffeineMg": 0,
+    "servingG": 30,
+    "type": "liquid-gel",
+    "notes": "Liquid texture; vitamins B6, E, zinc; no caffeine; made in France"
+  },
+  {
+    "id": "overstims-cafein-gel-coffee",
+    "brand": "Overstims",
+    "name": "Cafein Gel Coffee",
+    "carbsG": 25,
+    "caffeineMg": 80,
+    "servingG": 34,
+    "type": "gel",
+    "notes": "80mg natural caffeine from guarana; creamy texture; made in France"
+  },
+  {
+    "id": "aptonia-energy-gel-citrus",
+    "brand": "Aptonia (Decathlon)",
+    "name": "Energy Gel Citrus",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Vitamins B1, B6, B12, E + zinc; caffeine-free"
+  },
+  {
+    "id": "aptonia-energy-gel-salted-butter-caramel",
+    "brand": "Aptonia (Decathlon)",
+    "name": "Energy Gel Salted Butter Caramel",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 32,
+    "type": "gel",
+    "notes": "Vitamins B1, B6, B12, E + zinc; caffeine-free"
+  },
+  {
+    "id": "aptonia-hydro-gel-cola",
+    "brand": "Aptonia (Decathlon)",
+    "name": "Hydro Gel Cola",
+    "carbsG": 23,
+    "caffeineMg": 0,
+    "servingG": 62,
+    "type": "liquid-gel",
+    "notes": "Liquid gel format; 62ml; caffeine-free"
+  },
+  {
+    "id": "squeezy-energy-gel-lemon-caffeine",
+    "brand": "Squeezy",
+    "name": "Energy Gel Lemon + Caffeine",
+    "carbsG": 21,
+    "caffeineMg": 33,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "33mg caffeine (~100mg/100g); low osmolarity; no artificial additives"
+  },
+  {
+    "id": "squeezy-energy-gel-banana",
+    "brand": "Squeezy",
+    "name": "Energy Gel Banana",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Low osmolarity; caffeine-free; no artificial additives"
+  },
+  {
+    "id": "squeezy-energy-gel-raspberry",
+    "brand": "Squeezy",
+    "name": "Energy Gel Raspberry",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Low osmolarity; caffeine-free; no artificial additives"
+  },
+  {
+    "id": "squeezy-energy-gel-orange",
+    "brand": "Squeezy",
+    "name": "Energy Gel Orange",
+    "carbsG": 21,
+    "caffeineMg": 0,
+    "servingG": 33,
+    "type": "gel",
+    "notes": "Low osmolarity; caffeine-free; no artificial additives"
+  },
+  {
+    "id": "etixx-energy-gel-cola",
+    "brand": "Etixx",
+    "name": "Nutritional Energy Gel Cola",
+    "carbsG": 24,
+    "caffeineMg": 0,
+    "servingG": 38,
+    "type": "gel",
+    "notes": "Mixed sugars (glucose, maltose, sucrose, complex); caffeine-free"
+  },
+  {
+    "id": "etixx-energy-gel-cherry-caffeine",
+    "brand": "Etixx",
+    "name": "Energy Gel Cherry + Caffeine",
+    "carbsG": 24,
+    "caffeineMg": 80,
+    "servingG": 38,
+    "type": "gel",
+    "notes": "80mg natural caffeine"
+  },
+  {
+    "id": "etixx-double-carb-gel",
+    "brand": "Etixx",
+    "name": "PRO LINE Double Carb Gel",
+    "carbsG": 50,
+    "caffeineMg": 0,
+    "servingG": 70,
+    "type": "gel",
+    "notes": "High carb; 1:0.8 glucose:fructose; ~200mg sodium; caffeine-free"
+  },
+  {
+    "id": "muir-energy-red-raspberry",
+    "brand": "Muir Energy",
+    "name": "Red Raspberry (Fast Burning)",
+    "carbsG": 18,
+    "caffeineMg": 0,
+    "servingG": 35,
+    "type": "gel",
+    "notes": "Organic whole food; real fruit; caffeine-free"
+  },
+  {
+    "id": "muir-energy-red-raspberry-mate",
+    "brand": "Muir Energy",
+    "name": "Red Raspberry Mate (Caffeine)",
+    "carbsG": 18,
+    "caffeineMg": 90,
+    "servingG": 35,
+    "type": "gel",
+    "notes": "90mg yerba mate caffeine; slow-release; organic"
+  },
+  {
+    "id": "muir-energy-cashew-vanilla-mate",
+    "brand": "Muir Energy",
+    "name": "Cashew Vanilla Mate (Caffeine)",
+    "carbsG": 18,
+    "caffeineMg": 90,
+    "servingG": 35,
+    "type": "gel",
+    "notes": "90mg yerba mate caffeine; slow burning nut butter base; organic"
+  },
+  {
+    "id": "muir-energy-cacao-almond",
+    "brand": "Muir Energy",
+    "name": "Cacao Almond (Slow Burning)",
+    "carbsG": 14,
+    "caffeineMg": 0,
+    "servingG": 35,
+    "type": "gel",
+    "notes": "Raw nut butter base; higher fat; caffeine-free; organic"
+  }
+]

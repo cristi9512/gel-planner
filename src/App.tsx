@@ -27,6 +27,8 @@ const DEFAULT_PARAMS: NutritionParams = {
   caffeineStrategy: 'alternating',
   caffeineGelCount: 3,
   caffeineBlackoutMin: 60,
+  selectedGelId: null,
+  selectedCafGelId: null,
 };
 
 function getWarning(params: NutritionParams): string | undefined {
@@ -49,14 +51,9 @@ function NavItem({ icon, label, active, onClick }: NavItemProps) {
     <button
       onClick={onClick}
       className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors relative font-label
-        ${active
-          ? 'text-volt bg-volt/10'
-          : 'text-ink-muted hover:text-ink hover:bg-white/5'
-        }`}
+        ${active ? 'text-volt bg-volt/10' : 'text-ink-muted hover:text-ink hover:bg-white/5'}`}
     >
-      {active && (
-        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-volt rounded-r" />
-      )}
+      {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-volt rounded-r" />}
       <span className="text-base shrink-0">{icon}</span>
       <span className="hidden md:block">{label}</span>
       {active && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-volt hidden md:block" />}
@@ -95,28 +92,19 @@ export default function App() {
 
   const sidebar = (
     <aside className="fixed inset-y-0 left-0 z-50 w-14 md:w-52 bg-surface-low flex flex-col">
-      {/* Logo */}
       <div className="px-4 py-5 border-b border-surface-high/40">
         <div className="hidden md:block">
-          <p className="text-volt font-display font-black text-xs uppercase tracking-widest leading-tight">
-            Gel Timing
-          </p>
-          <p className="text-ink font-display font-black text-sm uppercase leading-tight">
-            Planner
-          </p>
+          <p className="text-volt font-display font-black text-xs uppercase tracking-widest leading-tight">Gel Timing</p>
+          <p className="text-ink font-display font-black text-sm uppercase leading-tight">Planner</p>
         </div>
         <div className="md:hidden flex items-center justify-center">
           <span className="text-volt font-display font-black text-lg">G</span>
         </div>
       </div>
-
-      {/* Nav */}
       <nav className="flex-1 py-4 space-y-1">
         <NavItem icon="⚡" label="Planner" active={page === 'planner'} onClick={() => setPage('planner')} />
         <NavItem icon="📐" label="How it works" active={page === 'algorithm'} onClick={() => setPage('algorithm')} />
       </nav>
-
-      {/* Bottom tag */}
       <div className="hidden md:block px-4 py-4 border-t border-surface-high/40">
         <p className="text-[10px] font-label text-ink-dim uppercase tracking-widest">Race Nutrition</p>
         <p className="text-[10px] font-label text-ink-dim">v2.0 · Client-side only</p>
@@ -135,6 +123,9 @@ export default function App() {
     );
   }
 
+  const hasElevationData = !!(gpx?.elevationProfile);
+  const gelsForMap = plan?.gels ?? [];
+
   return (
     <div className="flex min-h-screen bg-surface">
       {sidebar}
@@ -142,9 +133,7 @@ export default function App() {
       <main className="ml-14 md:ml-52 flex-1 overflow-x-hidden">
         {/* Hero */}
         <div className="px-6 md:px-10 pt-8 pb-6">
-          <p className="text-ink-muted text-[10px] font-label uppercase tracking-[0.2em] mb-2">
-            Race Nutrition Planning
-          </p>
+          <p className="text-ink-muted text-[10px] font-label uppercase tracking-[0.2em] mb-2">Race Nutrition Planning</p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h1 className="font-display font-black uppercase leading-none">
               <span className="text-ink text-4xl md:text-6xl block">Gel Timing</span>
@@ -163,18 +152,19 @@ export default function App() {
           </div>
         </div>
 
-        {/* Main content */}
         <div className="px-6 md:px-10 pb-12 space-y-5">
 
-          {/* Two-column: params + map */}
+          {/* Two-column: params | map + elevation */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            {/* Left: parameters + GPX uploader */}
             <div className="space-y-4">
               <ParametersPanel
                 params={params}
                 onChange={setParams}
                 onCalculate={handleCalculate}
                 gpxDistanceKm={gpx?.totalDistanceKm}
-                hasElevation={!!gpx?.elevationProfile}
+                hasElevation={hasElevationData}
                 warning={warning}
               />
               <div className="bg-surface-low rounded-xl p-5">
@@ -188,39 +178,41 @@ export default function App() {
                 />
                 {!gpx && (
                   <p className="text-xs font-label text-ink-dim mt-2">
-                    Upload a GPX to visualise the route, see the elevation chart, and export waypoints.
+                    Upload a GPX to see the route, elevation profile, and export waypoints.
                   </p>
                 )}
               </div>
             </div>
 
-            {/* Map / placeholder */}
-            {gpx ? (
-              <div className="rounded-xl overflow-hidden bg-surface-low" style={{ minHeight: '420px' }}>
-                <RouteMap trackPoints={gpx.trackPoints} gels={plan?.gels ?? []} />
-              </div>
-            ) : (
-              <div
-                className="rounded-xl flex flex-col items-center justify-center text-center p-10 bg-surface-low"
-                style={{ minHeight: '320px' }}
-              >
-                <span className="text-5xl mb-4 opacity-30">🗺️</span>
-                <p className="text-sm font-body font-medium text-ink-muted">Map appears after loading a GPX</p>
-                <p className="text-xs font-label text-ink-dim mt-1">Route and gel markers shown interactively</p>
-              </div>
-            )}
+            {/* Right: map only */}
+            <div className="flex flex-col gap-4">
+              {gpx ? (
+                <>
+                  {/* Map */}
+                  <div className="rounded-xl overflow-hidden bg-surface-low flex-shrink-0" style={{ height: '420px' }}>
+                    <RouteMap trackPoints={gpx.trackPoints} gels={gelsForMap} />
+                  </div>
+                </>
+              ) : (
+                <div
+                  className="rounded-xl flex flex-col items-center justify-center text-center p-10 bg-surface-low flex-1"
+                  style={{ minHeight: '300px' }}
+                >
+                  <span className="text-5xl mb-4 opacity-30">🗺️</span>
+                  <p className="text-sm font-body font-medium text-ink-muted">Map + elevation profile appear after loading a GPX</p>
+                  <p className="text-xs font-label text-ink-dim mt-1">Route and gel markers shown interactively</p>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Results */}
+          {/* Results below */}
           {plan ? (
             <>
               <ResultsSummary plan={plan} />
               <FeedingTimeline gels={plan.gels} totalMinutes={plan.effectiveTotalMinutes} />
-              {gpx?.elevationProfile && (
-                <ElevationChart
-                  trackPoints={gpx.trackPoints}
-                  gels={plan.gels}
-                />
+              {hasElevationData && gpx && (
+                <ElevationChart trackPoints={gpx.trackPoints} gels={plan.gels} />
               )}
               <GelList plan={plan} />
               {gpx && plan.gels.some((g) => g.lat !== undefined) && (
@@ -234,7 +226,7 @@ export default function App() {
               <p className="text-4xl mb-3 opacity-20">📊</p>
               <p className="text-sm font-body text-ink-muted">
                 Set your parameters and press{' '}
-                <span className="text-volt font-semibold">Calculate plan</span>
+                <span className="text-volt font-semibold">Calculate Plan</span>
               </p>
             </div>
           )}

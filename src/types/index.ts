@@ -31,8 +31,11 @@ export interface NutritionParams {
   useCaffeineGels: boolean;
   caffeinePerGelMg: number;
   caffeineStrategy: CaffeineStrategy;
-  caffeineGelCount: number;       // for 'finalPush': how many caffeinated gels at the end
-  caffeineBlackoutMin: number;    // no caffeine within last X minutes of race
+  caffeineGelCount: number;
+  caffeineBlackoutMin: number;
+  // Gel selection (UI convenience — fills the numeric fields above)
+  selectedGelId: string | null;
+  selectedCafGelId: string | null;
 }
 
 export interface ElevationProfile {
@@ -42,12 +45,23 @@ export interface ElevationProfile {
 
 export interface Plan {
   params: NutritionParams;
-  totalMinutes: number;            // flat time estimate
-  effectiveTotalMinutes: number;   // elevation-adjusted
+  totalMinutes: number;
+  effectiveTotalMinutes: number;
   gelIntervalMinutes: number;
   gels: GelPoint[];
   totalCarbs: number;
   avgCarbsPerHour: number;
   elevation?: ElevationProfile;
   totalCaffeineMg: number;
+}
+
+export interface GelEntry {
+  id: string;
+  brand: string;
+  name: string;
+  carbsG: number;
+  caffeineMg: number;
+  servingG: number;
+  type: string;
+  notes: string;
 }
