@@ -7,7 +7,6 @@ interface Props {
   params: NutritionParams;
   onChange: (params: NutritionParams) => void;
   onCalculate: () => void;
-  gpxDistanceKm?: number;
   hasElevation: boolean;
   warning?: string;
 }
@@ -35,7 +34,7 @@ function CockpitInput({
 }
 
 export function ParametersPanel({
-  params, onChange, onCalculate, gpxDistanceKm, hasElevation, warning,
+  params, onChange, onCalculate, hasElevation, warning,
 }: Props) {
   const [caffeineOpen, setCaffeineOpen] = useState(params.useCaffeineGels);
 
@@ -76,30 +75,9 @@ export function ParametersPanel({
 
   return (
     <div className="bg-surface-low rounded-xl p-5 space-y-5">
-      <p className="text-ink-muted text-[10px] font-label uppercase tracking-widest">Race Config</p>
+      <p className="text-ink-muted text-[10px] font-label uppercase tracking-widest">Gel Config</p>
 
-      {/* Pace + Distance */}
       <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-3 items-center">
-          <label className="text-xs font-label text-ink-muted">Pace</label>
-          <CockpitInput value={params.paceMinPerKm} min={3} max={12} step={0.1} unit="min/km"
-            onChange={(v) => set('paceMinPerKm', parseFloat(v))} />
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 items-center">
-          <label className="text-xs font-label text-ink-muted">Race distance</label>
-          <div className="relative">
-            <CockpitInput value={params.distanceKm} min={5} max={200} step={0.5} unit="km"
-              locked={gpxDistanceKm !== undefined}
-              onChange={(v) => set('distanceKm', parseFloat(v))} />
-            {gpxDistanceKm !== undefined && (
-              <span className="absolute -top-1 -right-1 text-[8px] font-label bg-volt text-surface px-1 rounded font-bold leading-tight">
-                GPX
-              </span>
-            )}
-          </div>
-        </div>
-
         <div className="grid grid-cols-2 gap-3 items-center">
           <label className="text-xs font-label text-ink-muted">Target carbs/hour</label>
           <CockpitInput value={params.carbsPerHourG} min={20} max={120} step={5} unit="g/h"

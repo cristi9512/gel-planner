@@ -61,7 +61,39 @@ export interface GelEntry {
   name: string;
   carbsG: number;
   caffeineMg: number;
+  sodiumMg: number;   // mg sodium per serving; 0 if not listed
   servingG: number;
   type: string;
   notes: string;
+}
+
+// ─── Hydration ────────────────────────────────────────────────────────────────
+
+export type WeightUnit      = 'kg' | 'lbs';
+export type TempUnit        = 'C' | 'F';
+export type PaceIntensity   = 'easy' | 'moderate' | 'hard';
+export type ElectrolyteSource = 'none' | 'salt-tabs' | 'drink' | 'both';
+
+export interface HydrationParams {
+  weightKg: number;
+  weightUnit: WeightUnit;
+  tempC: number;
+  tempUnit: TempUnit;
+  intensity: PaceIntensity;
+  electrolyteSource: ElectrolyteSource;
+  aidStations: number | null;   // null → auto: ceil(distanceKm / 5)
+  sodiumPerGelMgOverride: number | null; // null → use gel's sodiumMg
+}
+
+export interface HydrationPlan {
+  sweatRateMlPerHour: number;
+  totalFluidMl: number;
+  aidStationCount: number;
+  fluidPerAidStationMl: number;
+  sodiumMgPerHour: number;
+  totalSodiumMg: number;
+  sodiumFromGelsMg: number;
+  netSodiumMg: number;
+  gelHasElectrolytes: boolean;
+  warnings: string[];
 }

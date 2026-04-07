@@ -199,10 +199,65 @@ d = 2R · atan2(√a, √(1−a))`}
           </Note>
         </Section>
 
+        <Section title="7. Sweat rate model">
+          <p className="text-sm font-body text-ink-muted leading-relaxed">
+            The hydration tab estimates fluid loss using a three-factor additive model:
+          </p>
+          <Formula>
+            {`sweat_rate_ml_hr = 500
+  + max(0, (temp_°C − 15) / 5) × 100
+  + intensity_bonus
+
+  intensity_bonus:  Easy 0 / Moderate +150 / Hard +300 ml/hr`}
+          </Formula>
+          <p className="text-xs font-label text-ink-muted">
+            <span className="text-volt font-semibold">Example:</span> 22°C, Moderate intensity
+          </p>
+          <Formula>
+            {`sweat_rate = 500 + ((22−15)/5)×100 + 150
+           = 500 + 140 + 150
+           = 790 ml/hr`}
+          </Formula>
+          <Note>
+            The 500 ml/hr base reflects a typical resting/cool-weather sweat rate for an adult runner.
+            The temperature term adds 100 ml/hr for each 5 °C above 15 °C. Individual variation is high —
+            heavier, less-acclimatised, or high-intensity runners commonly exceed these estimates.
+          </Note>
+          <Callout>
+            Total fluid need = sweat_rate × race_hours. This is a <em>replacement target</em>, not a drinking target —
+            aim to replace 70–80% of sweat losses to avoid both dehydration and dangerous overhydration (hyponatraemia).
+          </Callout>
+        </Section>
+
+        <Section title="8. Sodium targets">
+          <p className="text-sm font-body text-ink-muted leading-relaxed">
+            Sodium is the primary electrolyte lost in sweat. Targets scale with intensity:
+          </p>
+          <Formula>
+            {`sodium_mg_hr:  Easy 500 / Moderate 750 / Hard 1000 mg/hr
+
+  total_sodium_mg     = sodium_mg_hr × race_hours
+  sodium_from_gels_mg = gel_count × sodium_per_gel_mg
+  net_sodium_mg       = max(0, total_sodium_mg − sodium_from_gels_mg)`}
+          </Formula>
+          <p className="text-sm font-body text-ink-muted leading-relaxed">
+            If your selected gel contributes sodium (e.g. electrolyte gels), this is subtracted
+            from the supplementation target automatically. Check your gel label — most plain
+            gels contain 10–30 mg Na per serving; electrolyte variants typically 100–250 mg.
+          </p>
+          <Note>
+            Sodium targets are expressed per hour rather than per litre of fluid because the
+            primary driver is sweat rate (time-dependent), not drinking volume. During hot
+            ultra-events, electrolyte replacement matters as much as fluid replacement.
+          </Note>
+        </Section>
+
         <div className="text-[10px] font-label text-ink-dim pt-4 border-t border-surface-high leading-relaxed">
           References: Naismith (1892) · Langmuir, <em>Mountaincraft and Leadership</em> (1984) ·
           Burke &amp; Deakin, <em>Clinical Sports Nutrition</em> (2015) ·
-          Jeukendrup, <em>Sports Medicine</em> 2011 (carbohydrate oxidation rates)
+          Jeukendrup, <em>Sports Medicine</em> 2011 (carbohydrate oxidation rates) ·
+          Sawka et al., <em>Medicine &amp; Science in Sports &amp; Exercise</em> 2007 (hydration guidelines) ·
+          Shirreffs &amp; Sawka, <em>Journal of Sports Sciences</em> 2011 (sodium and hydration)
         </div>
       </div>
     </div>
