@@ -1,6 +1,4 @@
-interface Props {
-  onBack: () => void;
-}
+import { useNavigate } from 'react-router-dom';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -37,13 +35,14 @@ function Callout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function AlgorithmPage({ onBack }: Props) {
+export function AlgorithmPage() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-surface">
       {/* Hero */}
       <div className="px-6 md:px-10 pt-8 pb-6">
         <button
-          onClick={onBack}
+          onClick={() => navigate('/')}
           className="text-[10px] font-label uppercase tracking-widest text-ink-muted hover:text-volt transition-colors mb-6 flex items-center gap-2"
         >
           ← Back to planner

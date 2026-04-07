@@ -10,7 +10,8 @@
       "Bash(arch -x86_64 /Users/cristinica/.nvm/versions/node/v24.14.1/bin/node --version)",
       "Bash(export NVM_DIR=\"$HOME/.nvm\")",
       "Bash(source \"$NVM_DIR/nvm.sh\")",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebSearch"
     ]
   }
 }

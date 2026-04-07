@@ -80,6 +80,38 @@ html, body, #root {
 ::-webkit-scrollbar-thumb { background: #2d3035; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #cffc00; }
 
+/* ── Print support ───────────────────────────────────────────────────────── */
+
+/* Hidden on screen; the @media print block below reveals it */
+.gel-print-root {
+  display: none;
+}
+
+@media print {
+  /* Force colour output (backgrounds, borders, etc.) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide the whole app shell */
+  body > #root {
+    display: none !important;
+  }
+
+  /* Show only the print portal */
+  .gel-print-root {
+    display: block !important;
+  }
+
+  /* Remove any extra margin that browsers add */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+}
+
 /* Elevation chart tooltip */
 .ele-tooltip {
   position: absolute;
