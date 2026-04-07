@@ -24,7 +24,7 @@ export function exportGPX(plan: Plan, trackPoints: TrackPoint[]): void {
     .join('\n');
 
   const gpxContent = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="Gel Timing Planner" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gpx version="1.1" creator="Running Fuel Planner" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata>
     <name>Plan nutritie - ${plan.gels.length} geluri</name>
     <desc>Target: ${plan.params.carbsPerHourG}g carbs/h | Gel: ${plan.params.carbsPerGelG}g | Pace: ${plan.params.paceMinPerKm}min/km | Distanta: ${plan.params.distanceKm}km</desc>

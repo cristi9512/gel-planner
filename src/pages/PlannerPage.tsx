@@ -24,9 +24,9 @@ import type { NutritionParams, Plan, HydrationParams } from '../types';
 import type { ParsedGPX } from '../utils/gpxParser';
 import type { Tab } from '../utils/urlState';
 
-const TABS: { id: Tab; label: string }[] = [
-  { id: 'gel',       label: '💧 Gel Planner'            },
-  { id: 'hydration', label: '🧂 Hydration & Electrolytes' },
+const TABS: { id: Tab; label: string; shortLabel: string }[] = [
+  { id: 'gel',       label: '💧 Gel Planner',             shortLabel: '💧 Gels'       },
+  { id: 'hydration', label: '🧂 Hydration & Electrolytes', shortLabel: '🧂 Hydration'  },
 ];
 
 function getWarning(params: NutritionParams): string | undefined {
@@ -151,8 +151,8 @@ export function PlannerPage() {
       />
 
       {/* ── Tab nav ────────────────────────────────────────────────── */}
-      <div className="px-6 md:px-10 border-b border-surface-high/40">
-        <div className="flex gap-0">
+      <div className="px-6 md:px-10 border-b border-surface-high/40 overflow-x-auto">
+        <div className="flex gap-0 min-w-max">
           {TABS.map((tab) => (
             <button
               key={tab.id}
@@ -160,7 +160,8 @@ export function PlannerPage() {
               className={`px-4 py-3 text-sm font-label font-semibold transition-colors relative whitespace-nowrap
                 ${activeTab === tab.id ? 'text-volt' : 'text-ink-muted hover:text-ink'}`}
             >
-              {tab.label}
+              <span className="md:hidden">{tab.shortLabel}</span>
+              <span className="hidden md:inline">{tab.label}</span>
               {activeTab === tab.id && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-volt rounded-t-full" />
               )}
@@ -238,11 +239,11 @@ export function PlannerPage() {
                 <GelList plan={plan} />
 
                 {/* Action row */}
-                <div className="flex justify-end items-end gap-3 pt-2">
+                <div className="flex flex-wrap justify-end items-end gap-3 pt-2">
                   <div className="flex flex-col items-center gap-2">
                     <button
                       onClick={() => setShowPrint(true)}
-                      className="flex items-center gap-2.5 rounded-full px-8 py-3 font-display font-black text-sm uppercase tracking-wider transition-all active:scale-95 bg-surface-high text-ink hover:bg-surface-highest border border-surface-highest/60"
+                      className="flex items-center gap-2.5 rounded-full px-6 md:px-8 py-3 font-display font-black text-sm uppercase tracking-wider whitespace-nowrap transition-all active:scale-95 bg-surface-high text-ink hover:bg-surface-highest border border-surface-highest/60"
                     >
                       🖨️ Print Race Card
                     </button>

@@ -20,9 +20,21 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Row({ label, children }: { label: string; children: React.ReactNode }) {
+function Row({
+  label, children, inline = false,
+}: {
+  label: string; children: React.ReactNode; inline?: boolean;
+}) {
+  if (inline) {
+    return (
+      <div className="grid grid-cols-2 gap-3 items-center">
+        <label className="text-xs font-label text-ink-muted">{label}</label>
+        {children}
+      </div>
+    );
+  }
   return (
-    <div className="grid grid-cols-2 gap-3 items-center">
+    <div className="space-y-1.5">
       <label className="text-xs font-label text-ink-muted">{label}</label>
       {children}
     </div>
@@ -251,7 +263,7 @@ export function HydrationPanel({ params, onChange, plan, distanceKm }: Props) {
           {/* Aid stations */}
           <div className="space-y-2.5 pt-3 border-t border-surface-high/60">
             <SectionLabel>Aid stations</SectionLabel>
-            <Row label="Number of stops">
+            <Row label="Number of stops" inline>
               <div className="cockpit-input bg-surface-high rounded-sm flex items-center">
                 <input
                   type="number"
@@ -288,7 +300,7 @@ export function HydrationPanel({ params, onChange, plan, distanceKm }: Props) {
             ) : (
               <p className="text-[10px] font-label text-ink-dim">No gel selected — set manually if known.</p>
             )}
-            <Row label="Sodium per gel">
+            <Row label="Sodium per gel" inline>
               <NumInput
                 value={params.sodiumPerGelMgOverride ?? gelSodiumMg}
                 min={0}

@@ -41,7 +41,7 @@ export function Sidebar() {
         <NavLink to="/" className="block">
           <div className="hidden md:block">
             <p className="text-volt font-display font-black text-xs uppercase tracking-widest leading-tight">
-              Gel Timing
+              Running Fuel
             </p>
             <p className="text-ink font-display font-black text-sm uppercase leading-tight">
               Planner
@@ -56,12 +56,13 @@ export function Sidebar() {
       {/* Nav */}
       <nav className="flex-1 py-4 space-y-1">
         <NavItem to="/" end icon="⚡" label="Planner" />
+        <NavItem to="/guide" icon="📖" label="User Guide" />
         <NavItem to="/how-it-works" icon="📐" label="How it works" />
       </nav>
 
       {/* Footer */}
       <div className="hidden md:block px-4 py-4 border-t border-surface-high/40">
-        <p className="text-[10px] font-label text-ink-dim uppercase tracking-widest">Race Nutrition</p>
+        <p className="text-[10px] font-label text-ink-dim uppercase tracking-widest">Running Fuel Planner</p>
         <p className="text-[10px] font-label text-ink-dim">v2.0 · Client-side only</p>
       </div>
     </aside>
