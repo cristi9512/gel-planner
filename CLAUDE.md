@@ -51,10 +51,13 @@ src/
     PrintRaceCard.tsx       # Print modal + portal; imports styles from src/styles/printCard.ts
     AlgorithmPage.tsx       # "How It Works" content; uses useNavigate for back button
     GpxUploader.tsx         # Drag-and-drop GPX loader
+    ShareButton.tsx         # "Share Plan" clipboard button; visible prop gates render
 
   utils/
     calculations.ts         # calculatePlan(), formatTime(), assignCaffeine()
     hydrationCalc.ts        # calculateHydration(), lbsToKg(), fToC()
+    urlState.ts             # URL hash encode/decode; exports DEFAULT_PARAMS, DEFAULT_HYDRATION, Tab type
+                            # readBootState() called once on app boot (useState lazy init)
     geo.ts                  # haversine(), calculateElevationProfile() (5 m noise threshold)
     gpxParser.ts            # DOMParser-based GPX → ParsedGPX
     gpxExporter.ts          # Plan + TrackPoints → GPX 1.1 Blob download
@@ -178,6 +181,19 @@ HydrationParams + raceMinutes + gelCount + sodiumPerGel → calculateHydration()
 - Dynamic `<style id="gel-print-page">` injected into `<head>` per format:
   - Half A4 → `@page { size: A5 portrait; margin: 8mm; }`
   - Wristband → `@page { size: 210mm 70mm landscape; margin: 5mm; }`
+
+## URL Share / State Encoding
+
+Format: `#plan=BASE64(encodeURIComponent(JSON))`
+
+- `urlState.ts` is the single source of truth for `DEFAULT_PARAMS`, `DEFAULT_HYDRATION`, and the `Tab` type — import from there, not from `PlannerPage`.
+- `readBootState()` is called via `useState(() => readBootState())` lazy initialiser — runs exactly once, even in StrictMode.
+- If `hasHash` is true on boot, `calculatePlan(bootParams)` is called immediately to restore the plan without requiring user interaction.
+- The debounced `useEffect` in `PlannerPage` (500 ms) writes the hash on every state change. If state equals defaults, the hash is cleared instead.
+- `history.replaceState` is used — no router navigation, no page reload.
+- Encoding: `btoa(encodeURIComponent(JSON.stringify({v, p, h, t})))`. The `encodeURIComponent` wrapper handles any non-Latin-1 characters that `btoa` would otherwise reject.
+- GPX track data is NOT encoded (binary / too large). After loading a shared URL, the map and elevation chart will be absent until the user re-uploads a GPX.
+- Gel ID validation: on decode, `getGelById` is called for both `selectedGelId` and `selectedCafGelId`. Unknown IDs are set to null and `hadUnknownGels = true`, which triggers a dismissible warning banner.
 
 ## GelEntry.sodiumMg
 `sodiumMg` is 0 by default for most gels in `gels.json` (sodium data not widely published).

@@ -1,0 +1,32 @@
+{
+  "name": "Running Gel Planner",
+  "short_name": "Gel Planner",
+  "description": "Free race nutrition calculator for runners. Plan gel timing, hydration, and electrolyte strategy for marathons and ultras.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0e11",
+  "theme_color": "#cffc00",
+  "lang": "en",
+  "categories": ["sports", "health", "fitness"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Gel Planner — race nutrition calculator"
+    }
+  ]
+}

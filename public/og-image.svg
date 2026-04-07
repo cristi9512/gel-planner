@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0e11"/>
+      <stop offset="100%" stop-color="#111417"/>
+    </linearGradient>
+    <linearGradient id="volt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4ffc8"/>
+      <stop offset="100%" stop-color="#cffc00"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cffc00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#cffc00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Volt glow stripe left -->
+  <rect x="0" y="0" width="480" height="630" fill="url(#glow)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="url(#volt)"/>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Eyebrow label -->
+  <text x="72" y="196" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="18" font-weight="600" letter-spacing="4" fill="#9ca3af"
+        text-transform="uppercase">RACE NUTRITION PLANNING</text>
+
+  <!-- Main title line 1 -->
+  <text x="68" y="310" font-family="'Lexend', 'Arial Black', sans-serif"
+        font-size="96" font-weight="900" fill="#ffffff">Gel</text>
+
+  <!-- Main title line 2 — volt -->
+  <text x="68" y="420" font-family="'Lexend', 'Arial Black', sans-serif"
+        font-size="96" font-weight="900" fill="url(#volt)">Planner.</text>
+
+  <!-- Tagline -->
+  <text x="72" y="488" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="22" font-weight="400" fill="#6b7280">
+    Gel timing · Hydration · Electrolytes · GPX export
+  </text>
+
+  <!-- Right side — feature pills -->
+  <g transform="translate(780, 180)">
+    <!-- Feature 1 -->
+    <rect x="0" y="0" width="340" height="52" rx="8" fill="#23262a" stroke="#2d3035" stroke-width="1"/>
+    <text x="20" y="33" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#cffc00">⚡</text>
+    <text x="46" y="33" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#ffffff">Exact gel timing per km</text>
+
+    <!-- Feature 2 -->
+    <rect x="0" y="68" width="340" height="52" rx="8" fill="#23262a" stroke="#2d3035" stroke-width="1"/>
+    <text x="20" y="101" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#00e3fd">💧</text>
+    <text x="46" y="101" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#ffffff">Sweat rate &amp; hydration plan</text>
+
+    <!-- Feature 3 -->
+    <rect x="0" y="136" width="340" height="52" rx="8" fill="#23262a" stroke="#2d3035" stroke-width="1"/>
+    <text x="20" y="169" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#cffc00">🧂</text>
+    <text x="46" y="169" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#ffffff">Sodium &amp; electrolyte targets</text>
+
+    <!-- Feature 4 -->
+    <rect x="0" y="204" width="340" height="52" rx="8" fill="#23262a" stroke="#2d3035" stroke-width="1"/>
+    <text x="20" y="237" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#cffc00">📍</text>
+    <text x="46" y="237" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#ffffff">GPX upload · 156+ gels</text>
+
+    <!-- Feature 5 -->
+    <rect x="0" y="272" width="340" height="52" rx="8" fill="#23262a" stroke="#2d3035" stroke-width="1"/>
+    <text x="20" y="305" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#cffc00">🖨️</text>
+    <text x="46" y="305" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#ffffff">Printable race card · Free</text>
+  </g>
+
+  <!-- Bottom URL bar -->
+  <rect x="0" y="582" width="1200" height="48" fill="#111417"/>
+  <text x="72" y="613" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="500" fill="#6b7280">gel-planner.netlify.app</text>
+  <text x="1128" y="613" text-anchor="end" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16" font-weight="600" fill="#cffc00">Free · No signup</text>
+</svg>

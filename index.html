@@ -2,9 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gel Timing Planner</title>
+
+    <!-- ── Primary SEO ─────────────────────────────────────────────────────── -->
+    <title>Running Gel Planner — Free Race Nutrition & Hydration Calculator</title>
+    <meta name="description" content="Plan your race day nutrition with precision. Calculate gel timing, hydration needs, sodium targets, and electrolyte strategy for marathons, ultras, and trail runs. Free, GPX-aware tool." />
+    <meta name="keywords" content="running gel planner, gel timing calculator, race nutrition calculator, marathon gel schedule, when to take gels running, running fuel calculator, carbs calculator running, hydration calculator marathon, electrolyte calculator, trail running nutrition, ultra marathon fueling, race day nutrition plan, GPX gel planner" />
+    <meta name="author" content="Gel Planner" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://gel-planner.netlify.app/" />
+
+    <!-- ── Open Graph (Facebook, LinkedIn, Slack, …) ──────────────────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://gel-planner.netlify.app/" />
+    <meta property="og:title"       content="Running Gel Planner — Free Race Nutrition Calculator" />
+    <meta property="og:description" content="Calculate exactly when to take your gels, how much to drink, and how to hit your sodium targets. GPX upload, elevation-aware, print-ready race card." />
+    <meta property="og:image"       content="https://gel-planner.netlify.app/og-image.png" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"   content="Gel Planner app — race nutrition calculator for runners" />
+    <meta property="og:site_name"   content="Gel Planner" />
+    <meta property="og:locale"      content="en_US" />
+
+    <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Running Gel Planner — Free Race Nutrition Calculator" />
+    <meta name="twitter:description" content="Calculate exactly when to take your gels, how much to drink, and how to hit your sodium targets. Free tool for marathon and ultra runners." />
+    <meta name="twitter:image"       content="https://gel-planner.netlify.app/og-image.png" />
+
+    <!-- ── Icons & theme ──────────────────────────────────────────────────── -->
+    <link rel="icon"             type="image/svg+xml"  href="/favicon.svg" />
+    <link rel="icon"             type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180"       href="/apple-touch-icon.png" />
+    <link rel="manifest"         href="/site.webmanifest" />
+    <meta name="theme-color"    content="#cffc00" />
+    <meta name="msapplication-TileColor" content="#0c0e11" />
+
+    <!-- ── Structured data (JSON-LD) ─────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://gel-planner.netlify.app/#app",
+          "name": "Running Gel Planner",
+          "url": "https://gel-planner.netlify.app/",
+          "description": "Free running nutrition calculator. Plan gel timing, hydration strategy, sodium targets, and electrolyte intake for marathons, ultras, and trail races. Upload GPX for elevation-aware scheduling.",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "Web",
+          "browserRequirements": "Requires JavaScript",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Gel timing calculator based on carbohydrate targets",
+            "GPX file upload with elevation-aware scheduling (Naismith's rule)",
+            "Hydration and sweat rate calculator",
+            "Sodium and electrolyte recommendations",
+            "156+ gel products database",
+            "Caffeinated gel strategy planner",
+            "Printable race card (A5 and wristband formats)",
+            "GPX export for Garmin, Coros, Suunto, Komoot"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://gel-planner.netlify.app/#website",
+          "url": "https://gel-planner.netlify.app/",
+          "name": "Gel Planner",
+          "description": "Free race nutrition planning for runners",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://gel-planner.netlify.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "When should I take gels during a race?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The first gel is typically taken 30–45 minutes into the race, before you feel hungry. Subsequent gels follow an interval based on your carbohydrate target: e.g., 60 g/hr with 22 g gels = one gel every 22 minutes. Stop taking gels 5 minutes before the finish line."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I calculate how many gels I need for a marathon?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Divide your target carbohydrate intake per hour by the carbs in each gel to get the gel interval in minutes. For a 4-hour marathon targeting 60 g carbs/hr with 22 g gels, you need approximately 10–11 gels."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much should I drink during a marathon?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A typical sweat rate starts at 500 ml/hr and increases by 100 ml per 5°C above 15°C, plus intensity adjustments (Easy +0 / Moderate +150 / Hard +300 ml/hr). Aim to replace 70–80% of sweat losses to avoid both dehydration and hyponatraemia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the best caffeine gel strategy for a race?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Two common strategies: Alternating (every other gel is caffeinated, spreading intake across the race) or Final Push (caffeinated gels only in the last 25–30% of the race for a late boost). Avoid caffeine in the final 60 minutes if you're sensitive to it."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── Fonts ───────────────────────────────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
